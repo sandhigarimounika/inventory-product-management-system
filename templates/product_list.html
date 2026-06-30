@@ -12,13 +12,16 @@
 <h2>Products</h2>
 
 {% for p in products %}
-
-{{ p.product_name }}
-<br>
-
+    <a href="/api/product/{{ p.id }}/">
+        {{ p.product_name }}
+    </a>
+    <br><br>
 {% endfor %}
+
+<a href="/api/add/">Add Product</a>
 
 {% endblock %}
 
 </body>
 </html>
+

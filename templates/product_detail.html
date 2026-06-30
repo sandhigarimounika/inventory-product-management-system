@@ -9,10 +9,29 @@
 
 {% block content %}
 
-<h2>{{ product.product_name }}</h2>
+<h2>Product Details</h2>
 
-Price : {{ product.price }}
+<p><strong>Name:</strong> {{ product.product_name }}</p>
+
+<p><strong>Quantity:</strong> {{ product.quantity }}</p>
+
+<p><strong>Price:</strong> {{ product.price }}</p>
+
+<p><strong>Description:</strong> {{ product.description }}</p>
+
+<a href="/api/edit/{{ product.id }}/">
+    <button>Update</button>
+</a>
+
+<a href="/api/delete/{{ product.id }}/">
+    <button>Delete</button>
+</a>
+
+<br><br>
+
+<a href="/api/products/">Back to Products</a>
 
 {% endblock %}
 </body>
 </html>
+

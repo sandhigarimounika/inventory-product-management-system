@@ -6,10 +6,9 @@ from .serializer import ProductSerializer
 
 # Create your views here.
 from django.views.generic import CreateView,UpdateView,DeleteView
-from django.views.generic.detail import DetailView
-from django.views.generic.list import ListView
 from django.urls import reverse_lazy
 from .models import Product
+
 def dashboard(request):
     total_products=Product.objects.count()
     return render(request,'dashboard.html',{'total_products':total_products})

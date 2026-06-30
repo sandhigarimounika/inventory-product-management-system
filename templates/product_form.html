@@ -9,15 +9,16 @@
 
 {% block content %}
 
-<form method="POST">
+<h2>Product Form</h2>
+
+<form method="post">
     {% csrf_token %}
     {{ form.as_p }}
-
     <button type="submit">Save</button>
-
 </form>
 
 {% endblock %}
 
 </body>
 </html>
+
